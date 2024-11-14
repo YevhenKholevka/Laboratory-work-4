@@ -1,1 +1,37 @@
+name: Print Software Versions
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check_software_versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Display Data Processing Software Versions
+        run: |
+          echo "Checking Data Processing Software Versions..."
+          # Додайте команди для виведення версій ПЗ для обробки даних
+          # Наприклад, перевірка версії Python
+          python --version
+          # Додайте інші команди для відповідного ПЗ
+
+  check_database_versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Display Database Software Versions
+        run: |
+          echo "Checking Database Software Versions..."
+          # Додайте команди для виведення версій СКБД
+          # Наприклад, перевірка версії PostgreSQL
+          psql --version
+          # Додайте інші команди для відповідного СКБД
 
