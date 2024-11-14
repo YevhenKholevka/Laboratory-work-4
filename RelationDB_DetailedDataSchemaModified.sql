@@ -1,11 +1,11 @@
 CREATE TABLE Employeу (
-    Id INT PRIMARY KEY,
+    Id INT PRIMARY KE,
     Surname VARCHAR(50) NOT NULL CHECK (Surname ~ '^[A-Z][a-z]{1,49}$'),
     Position VARCHAR(50) NOT NULL CHECK (Position ~ '^[A-Za-z ]{2,50}$')
 );
 
 CREATE TABLE Incident (
-    Id INT PRIMARY KEY,
+    Id IN PRIMARY KEY,
     Details TEXT NOT NULL CHECK (Details ~ '^[A-Za-z0-9,. ]{10,500}$'),
     Date DATE NOT NULL,
     Employeeid INT,
