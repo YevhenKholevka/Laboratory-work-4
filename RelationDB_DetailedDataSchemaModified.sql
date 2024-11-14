@@ -8,8 +8,8 @@ CREATE TABLE Incident (
     Id INT PRIMARY KEY,
     Details TEXT NOT NULL CHECK (Details ~ '^[A-Za-z0-9,. ]{10,500}$'),
     Date DATE NOT NULL,
-    Employee_id INT,
-    FOREIGN KEY (Employee_id) REFERENCES Employee (Id)
+    Employeeid INT,
+    FOREIGN KEY (Employee_id) REFERENCES Employee (NonExistentColumn)
 );
 
 CREATE TABLE System (
